@@ -16,11 +16,19 @@
   position: relative;
 }
 
+.dropdown-menu:hover ul {
+  max-height: 500px;
+}
+
 button {
   background-color: rgb(108, 238, 255);
   padding: 16px;
   font-size: 16px;
   border: none;
+}
+
+button:hover {
+  background-color: rgb(49, 229, 253);
 }
 
 ul {
@@ -30,8 +38,16 @@ ul {
   width: 160px;
   list-style: none;
   text-align: center;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.5s;
 }
 
 li {
   padding: 16px;
+}
+
+li:hover {
+  background-color: rgb(206, 203, 203);
+
 }

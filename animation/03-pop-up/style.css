@@ -12,6 +12,7 @@ body {
   height: 100vh;
   background-color: #ffffff;
   opacity: 100%;
+  transition: opacity 1s, background-color 1s;
 }
 
 #trigger-modal,
@@ -42,6 +43,8 @@ body {
   align-items: center;
   margin-top: 10%;
   opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s, transform 1s, margin-top 1s, visibility 1s;
 }
 
 #close-modal {
@@ -51,4 +54,20 @@ body {
   border: none;
   border-radius: 5px;
   font-weight: 600;
+}
+
+#trigger-modal:hover, #close-modal:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 1px black;
+}
+
+.button-container.show {
+  opacity: 40%;
+  background-color: black;
+}
+
+.popup-modal.show {
+  opacity: 100%;
+  margin-top: 0;
+  visibility: visible;
 }
